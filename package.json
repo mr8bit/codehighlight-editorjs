@@ -1,6 +1,6 @@
 {
-  "name": "@editorjs/code",
-  "version": "2.4.1",
+  "name": "code-editorjs",
+  "version": "0.0.1",
   "keywords": [
     "codex editor",
     "code",
@@ -17,8 +17,8 @@
     "build:dev": "webpack --mode development --watch"
   },
   "author": {
-    "name": "CodeX",
-    "email": "team@ifmo.su"
+    "name": "Lambda (mr8bit)",
+    "email": "info@lambda-it.ru"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -28,5 +28,9 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "codeflask": "^1.4.1",
+    "prismjs": "^1.18.0"
   }
 }

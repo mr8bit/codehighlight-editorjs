@@ -24,10 +24,10 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + '/dist',
+    path: './dist',
     publicPath: '/',
-    filename: 'bundle.js',
-    library: 'CodeTool',
+    filename: 'code_highlight.js',
+    library: 'CodeHighlight',
     libraryTarget: 'umd'
   }
 };
