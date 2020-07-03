@@ -24,8 +24,7 @@ module.exports = {
     ]
   },
   output: {
-    path: './dist',
-    publicPath: '/',
+    path: '/home/mr9bit/work/lambda-react-redux/src/static/components/EditorJS Plugin/codehighlight-editorjs/dist',
     filename: 'code_highlight.js',
     library: 'CodeHighlight',
     libraryTarget: 'umd'

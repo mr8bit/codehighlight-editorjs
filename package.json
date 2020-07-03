@@ -30,6 +30,7 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.16.1",
     "codeflask": "^1.4.1",
     "prismjs": "^1.18.0"
   }

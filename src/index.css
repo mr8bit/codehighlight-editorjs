@@ -29,3 +29,13 @@
     justify-content: center;
     margin: 15px 0;
 }
+
+.codeflask__textarea {
+    height: 100%;
+    padding: 8px 9px !important;
+    margin: 0px !important;
+    font-size: 13px;
+    line-height: 20px;
+    color: transparent;
+    font-family: monospace, monospace;
+}
