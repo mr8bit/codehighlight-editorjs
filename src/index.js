@@ -85,7 +85,6 @@ class CodeTool {
       holder: null,
       textarea: null
     };
-
     this.data = data;
   }
 
@@ -107,7 +106,7 @@ class CodeTool {
     const placeholder = document.createElement('option');
 
     placeholder.value = '';
-    placeholder.text = 'Select code lang...';
+    placeholder.text = 'Выберите язык...';
     placeholder.setAttribute('hidden', 'True');
     this.codeSelect.appendChild(placeholder);
     for (var i = 0; i < this.codeLang.length; i++) {
@@ -119,9 +118,9 @@ class CodeTool {
     }
 
     if (this.data.code) {
-      this.createCodeFlask(this.data.code, this.data.language, wrapper);
+      this.createCodeFlask(this.data.code, this.data.lang, wrapper);
       this.codeSelect.style.display = 'none';
-      this.codeSelect.value = this.data.language;
+      this.codeSelect.value = this.data.lang;
     } else {
       this.codeSelect.addEventListener('change', () => {
         this.createCodeFlask('Input some code', this.codeSelect.value, wrapper);
@@ -138,9 +137,11 @@ class CodeTool {
 
     textarea.setAttribute('id', 'code-block');
     textarea.classList.add('code-block');
+
     wrapper.appendChild(textarea);
     this.flask = new CodeFlask(textarea, {
-      language: lang
+      language: lang,
+      defaultTheme: false
     });
 
     this.flask.addLanguage('python', Prism.languages.python);
@@ -150,6 +151,8 @@ class CodeTool {
     this.flask.addLanguage('cpp', Prism.languages.cpp);
     this.flask.addLanguage('c', Prism.languages.c);
     this.flask.addLanguage('arduino', Prism.languages.arduino);
+
+    this.flask.addLanguage('swift', Prism.languages.swift);
 
     this.flask.addLanguage('javascript', Prism.languages.javascript);
     this.flask.addLanguage('json', Prism.languages.json);
@@ -191,6 +194,10 @@ class CodeTool {
       {
         name: 'Arduino',
         value: 'arduino'
+      },
+      {
+        name: 'Swift',
+        value: 'swift'
       },
       {
         name: 'Bash',
@@ -245,6 +252,7 @@ class CodeTool {
         code: this.flask.getCode(),
         lang: this.codeSelect.value
       };
+      console.log(data);
     } else {
       data= {
         code: 'not Select',
@@ -262,7 +270,7 @@ class CodeTool {
     const content = event.detail.data;
 
     this.data = {
-      code: content.textContent
+      code: content.textContent,
     };
   }
 
@@ -306,7 +314,7 @@ class CodeTool {
    * @returns {string}
    */
   static get DEFAULT_PLACEHOLDER() {
-    return 'Enter a code';
+    return 'Enter a code...';
   }
 
   /**
@@ -330,6 +338,7 @@ class CodeTool {
   static get sanitize() {
     return {
       code: true, // Allow HTML tags
+      lang: true, // Allow HTML tags
     };
   }
 }

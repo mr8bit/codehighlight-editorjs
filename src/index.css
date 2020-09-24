@@ -5,7 +5,7 @@
 
 .codeflask {
     background: #fff;
-    color: #4f559c;
+    color: #bfbfbf;
     border: 1px solid #eef5fa;
     padding: 10px;
 }
@@ -15,7 +15,7 @@
 }
 
 .codeflask__code {
-    font-size: 13px;
+    font-size: 14px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
 }
 
@@ -34,8 +34,88 @@
     height: 100%;
     padding: 8px 9px !important;
     margin: 0px !important;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
     color: transparent;
     font-family: monospace, monospace;
+}
+
+
+
+.codeflask {
+  background: #252525;
+  color: #bfbfbf;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
 }
