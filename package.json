@@ -32,6 +32,6 @@
   "dependencies": {
     "@editorjs/editorjs": "^2.16.1",
     "codeflask": "^1.4.1",
-    "prismjs": "^1.18.0"
+    "prismjs": "^1.21.0"
   }
 }
